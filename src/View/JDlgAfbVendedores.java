@@ -27,21 +27,158 @@ public class JDlgAfbVendedores extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jTxtAfbCodigo = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jTxtAfbNome = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jTxtAfbCpf = new javax.swing.JTextField();
+        jFmtAfbTelefone = new javax.swing.JFormattedTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jTxtAfbEmail = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jTxtAfbComissao = new javax.swing.JTextField();
+        jChbAfbAtivo = new javax.swing.JCheckBox();
+        jBtnAfbPesquisar = new javax.swing.JButton();
+        jBtnAfbIncluir = new javax.swing.JButton();
+        jBtnAfbAlterar = new javax.swing.JButton();
+        jBtnAfbExcluir = new javax.swing.JButton();
+        jBtnAfbCancelar = new javax.swing.JButton();
+        jBtnAfbConfirmar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jLabel1.setText("Codigo");
+
+        jLabel2.setText("Nome");
+
+        jLabel3.setText("Cpf");
+
+        jLabel15.setText("Telefone");
+
+        jLabel7.setText("Email");
+
+        jLabel5.setText("Comissao");
+
+        jTxtAfbComissao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTxtAfbComissaoActionPerformed(evt);
+            }
+        });
+
+        jChbAfbAtivo.setText("Ativo");
+
+        jBtnAfbPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
+        jBtnAfbPesquisar.setText("Pesquisar");
+
+        jBtnAfbIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
+        jBtnAfbIncluir.setText("Incluir");
+
+        jBtnAfbAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
+        jBtnAfbAlterar.setText("Alterar");
+
+        jBtnAfbExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
+        jBtnAfbExcluir.setText("Excluir");
+
+        jBtnAfbCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar_1.png"))); // NOI18N
+        jBtnAfbCancelar.setText("Cancelar");
+
+        jBtnAfbConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
+        jBtnAfbConfirmar.setText("Confirmar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 644, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jBtnAfbIncluir)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBtnAfbAlterar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBtnAfbExcluir)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBtnAfbCancelar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBtnAfbConfirmar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBtnAfbPesquisar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1)
+                            .addComponent(jTxtAfbCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2)
+                            .addComponent(jTxtAfbNome, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(182, 182, 182)
+                                .addComponent(jLabel7))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTxtAfbCpf)
+                                    .addComponent(jLabel15)
+                                    .addComponent(jFmtAfbTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(31, 31, 31)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jTxtAfbComissao, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jChbAfbAtivo))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel5)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(jTxtAfbEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 414, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTxtAfbCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTxtAfbNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTxtAfbCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtAfbEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel5))
+                .addGap(3, 3, 3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jFmtAfbTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtAfbComissao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jChbAfbAtivo))
+                .addGap(89, 89, 89)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBtnAfbIncluir)
+                    .addComponent(jBtnAfbAlterar)
+                    .addComponent(jBtnAfbExcluir)
+                    .addComponent(jBtnAfbCancelar)
+                    .addComponent(jBtnAfbConfirmar)
+                    .addComponent(jBtnAfbPesquisar))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTxtAfbComissaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtAfbComissaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTxtAfbComissaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -86,5 +223,24 @@ public class JDlgAfbVendedores extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnAfbAlterar;
+    private javax.swing.JButton jBtnAfbCancelar;
+    private javax.swing.JButton jBtnAfbConfirmar;
+    private javax.swing.JButton jBtnAfbExcluir;
+    private javax.swing.JButton jBtnAfbIncluir;
+    private javax.swing.JButton jBtnAfbPesquisar;
+    private javax.swing.JCheckBox jChbAfbAtivo;
+    private javax.swing.JFormattedTextField jFmtAfbTelefone;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JTextField jTxtAfbCodigo;
+    private javax.swing.JTextField jTxtAfbComissao;
+    private javax.swing.JTextField jTxtAfbCpf;
+    private javax.swing.JTextField jTxtAfbEmail;
+    private javax.swing.JTextField jTxtAfbNome;
     // End of variables declaration//GEN-END:variables
 }
