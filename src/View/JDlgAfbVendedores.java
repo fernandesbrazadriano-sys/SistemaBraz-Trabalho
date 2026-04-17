@@ -16,6 +16,7 @@ public class JDlgAfbVendedores extends javax.swing.JDialog {
     public JDlgAfbVendedores(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        
     }
 
     /**
