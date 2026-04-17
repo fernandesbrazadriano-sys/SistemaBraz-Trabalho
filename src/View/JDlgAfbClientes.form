@@ -26,12 +26,6 @@
           <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jTxtAfbCidade" max="32767" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jTxtAfbEstado" min="-2" pref="156" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="401" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jFmtAfbCep" min="-2" pref="122" max="-2" attributes="0"/>
@@ -95,26 +89,39 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTxtAfbApelido" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTxtAfbApelido" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jTxtAfbCidade" max="32767" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jTxtAfbEstado" min="-2" pref="156" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jTxtAfbBairro" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTxtAfbCelular" alignment="0" min="-2" pref="174" max="-2" attributes="0"/>
-                                          <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jFmtAfbCelular" min="-2" pref="174" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTxtAfbTelefoneResid" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                          <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jFmtAfbTelefone" pref="149" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Component id="jTxtAfbBairro" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
@@ -162,7 +169,7 @@
                           <Component id="jTxtAfbApelido" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jChbAfbAtivo" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="17" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -183,12 +190,12 @@
                       </Group>
                       <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTxtAfbCelular" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTxtAfbTelefoneResid" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTxtAfbCidade" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTxtAfbEstado" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jFmtAfbCelular" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jFmtAfbTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jBtnAfbIncluir" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBtnAfbAlterar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -228,8 +235,6 @@
     </Component>
     <Component class="javax.swing.JTextField" name="jTxtAfbNome">
     </Component>
-    <Component class="javax.swing.JTextField" name="jTxtAfbTelefoneResid">
-    </Component>
     <Component class="javax.swing.JTextField" name="jTxtAfbApelido">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel13">
@@ -247,8 +252,6 @@
         <Property name="text" type="java.lang.String" value="Cpf"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTxtAfbCelular">
-    </Component>
     <Component class="javax.swing.JCheckBox" name="jChbAfbAtivo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ativo"/>
@@ -263,6 +266,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Excluir"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnAfbExcluirActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JFormattedTextField" name="jFmtAfbRg">
       <Events>
@@ -276,6 +282,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnAfbCancelarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
@@ -289,6 +298,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Confirmar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnAfbConfirmarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JFormattedTextField" name="jFmtAfbDataNasc">
     </Component>
@@ -299,6 +311,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Pesquisar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnAfbPesquisarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
@@ -312,6 +327,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Incluir"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnAfbIncluirActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
@@ -325,6 +343,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Alterar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnAfbAlterarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="jTxtAfbEmail">
     </Component>
@@ -362,6 +383,10 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTxtAfbEstado">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFmtAfbCelular">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFmtAfbTelefone">
     </Component>
   </SubComponents>
 </Form>

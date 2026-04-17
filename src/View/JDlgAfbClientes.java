@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author u07994189199
@@ -16,6 +18,35 @@ public class JDlgAfbClientes extends javax.swing.JDialog {
     public JDlgAfbClientes(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+          setTitle("Tela Cliente");
+        setLocationRelativeTo(null);
+         habilitar(false);
+    }
+    
+    public void habilitar (boolean valor){
+        jFmtAfbRg.setEnabled(valor);
+        jTxtAfbNome.setEnabled(valor);
+        jTxtAfbApelido.setEnabled(valor);
+        jTxtAfbEmail.setEnabled(valor);
+        jTxtAfbBairro.setEnabled(valor);
+        jTxtAfbEstado.setEnabled(valor);
+        jTxtAfbCidade.setEnabled(valor);
+        jTxtAfbCodigo.setEnabled(valor);
+        jFmtAfbCpf.setEnabled(valor);
+        jFmtAfbCelular.setEnabled(valor);
+        jFmtAfbTelefone.setEnabled(valor);
+        jFmtAfbDataNasc.setEnabled(valor);
+        jFmtAfbCep.setEnabled(valor);
+        jFmtAfbEndereco.setEnabled(valor);
+        jChbAfbAtivo.setEnabled(valor);
+        jBtnAfbAlterar.setEnabled(!valor);
+        jBtnAfbCancelar.setEnabled(valor);
+        jBtnAfbConfirmar.setEnabled(valor);
+        jBtnAfbExcluir.setEnabled(!valor);
+        jBtnAfbIncluir.setEnabled(!valor);
+        jBtnAfbPesquisar.setEnabled(!valor);
+        
+        
     }
 
     /**
@@ -32,12 +63,10 @@ public class JDlgAfbClientes extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jTxtAfbNome = new javax.swing.JTextField();
-        jTxtAfbTelefoneResid = new javax.swing.JTextField();
         jTxtAfbApelido = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTxtAfbCelular = new javax.swing.JTextField();
         jChbAfbAtivo = new javax.swing.JCheckBox();
         jFmtAfbCpf = new javax.swing.JFormattedTextField();
         jBtnAfbExcluir = new javax.swing.JButton();
@@ -62,6 +91,8 @@ public class JDlgAfbClientes extends javax.swing.JDialog {
         jTxtAfbCidade = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jTxtAfbEstado = new javax.swing.JTextField();
+        jFmtAfbCelular = new javax.swing.JFormattedTextField();
+        jFmtAfbTelefone = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -81,6 +112,11 @@ public class JDlgAfbClientes extends javax.swing.JDialog {
 
         jBtnAfbExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
         jBtnAfbExcluir.setText("Excluir");
+        jBtnAfbExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbExcluirActionPerformed(evt);
+            }
+        });
 
         jFmtAfbRg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,24 +126,49 @@ public class JDlgAfbClientes extends javax.swing.JDialog {
 
         jBtnAfbCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jBtnAfbCancelar.setText("Cancelar");
+        jBtnAfbCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbCancelarActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Rg");
 
         jBtnAfbConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
         jBtnAfbConfirmar.setText("Confirmar");
+        jBtnAfbConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbConfirmarActionPerformed(evt);
+            }
+        });
 
         jBtnAfbPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnAfbPesquisar.setText("Pesquisar");
+        jBtnAfbPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbPesquisarActionPerformed(evt);
+            }
+        });
 
         jLabel6.setText("Data de Nascimento");
 
         jBtnAfbIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
         jBtnAfbIncluir.setText("Incluir");
+        jBtnAfbIncluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbIncluirActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText("Email");
 
         jBtnAfbAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar_1.png"))); // NOI18N
         jBtnAfbAlterar.setText("Alterar");
+        jBtnAfbAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbAlterarActionPerformed(evt);
+            }
+        });
 
         jLabel8.setText("Cep");
 
@@ -125,11 +186,6 @@ public class JDlgAfbClientes extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTxtAfbCidade)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTxtAfbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(401, 401, 401))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -181,22 +237,31 @@ public class JDlgAfbClientes extends javax.swing.JDialog {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTxtAfbApelido, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addGap(18, 18, 18)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTxtAfbApelido, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel3))
+                                .addGap(18, 18, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jTxtAfbCidade)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTxtAfbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(39, 39, 39)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel10)
+                                    .addComponent(jTxtAfbBairro)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel10)
+                                        .addGap(41, 41, 41))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTxtAfbCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel13))
+                                            .addComponent(jLabel13)
+                                            .addComponent(jFmtAfbCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel12)
-                                            .addComponent(jTxtAfbTelefoneResid, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jTxtAfbBairro))
+                                            .addComponent(jFmtAfbTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE))))
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -232,7 +297,7 @@ public class JDlgAfbClientes extends javax.swing.JDialog {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTxtAfbApelido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jChbAfbAtivo))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
                             .addComponent(jLabel9)
@@ -250,11 +315,11 @@ public class JDlgAfbClientes extends javax.swing.JDialog {
                             .addComponent(jLabel11))
                         .addGap(3, 3, 3)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTxtAfbCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTxtAfbTelefoneResid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTxtAfbCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTxtAfbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(34, 34, 34)
+                            .addComponent(jTxtAfbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jFmtAfbCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jFmtAfbTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(59, 59, 59)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jBtnAfbIncluir)
                             .addComponent(jBtnAfbAlterar)
@@ -274,6 +339,43 @@ public class JDlgAfbClientes extends javax.swing.JDialog {
     private void jFmtAfbRgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFmtAfbRgActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jFmtAfbRgActionPerformed
+
+    private void jBtnAfbIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbIncluirActionPerformed
+        habilitar(true);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbIncluirActionPerformed
+
+    private void jBtnAfbAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbAlterarActionPerformed
+        habilitar(true);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbAlterarActionPerformed
+
+    private void jBtnAfbExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbExcluirActionPerformed
+        JOptionPane.showConfirmDialog(null, "após a escolha não terá vola....tem certeza que deseja exluir ?",
+            "Excluir registro", JOptionPane.YES_NO_OPTION);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbExcluirActionPerformed
+
+    private void jBtnAfbCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbCancelarActionPerformed
+        habilitar(false);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbCancelarActionPerformed
+
+    private void jBtnAfbConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbConfirmarActionPerformed
+        habilitar(false);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbConfirmarActionPerformed
+
+    private void jBtnAfbPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbPesquisarActionPerformed
+        JOptionPane.showInputDialog(null, "digite o código do cliente:");
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbPesquisarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -326,11 +428,13 @@ public class JDlgAfbClientes extends javax.swing.JDialog {
     private javax.swing.JButton jBtnAfbIncluir;
     private javax.swing.JButton jBtnAfbPesquisar;
     private javax.swing.JCheckBox jChbAfbAtivo;
+    private javax.swing.JFormattedTextField jFmtAfbCelular;
     private javax.swing.JFormattedTextField jFmtAfbCep;
     private javax.swing.JFormattedTextField jFmtAfbCpf;
     private javax.swing.JFormattedTextField jFmtAfbDataNasc;
     private javax.swing.JFormattedTextField jFmtAfbEndereco;
     private javax.swing.JFormattedTextField jFmtAfbRg;
+    private javax.swing.JFormattedTextField jFmtAfbTelefone;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -346,12 +450,10 @@ public class JDlgAfbClientes extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTxtAfbApelido;
     private javax.swing.JTextField jTxtAfbBairro;
-    private javax.swing.JTextField jTxtAfbCelular;
     private javax.swing.JTextField jTxtAfbCidade;
     private javax.swing.JTextField jTxtAfbCodigo;
     private javax.swing.JTextField jTxtAfbEmail;
     private javax.swing.JTextField jTxtAfbEstado;
     private javax.swing.JTextField jTxtAfbNome;
-    private javax.swing.JTextField jTxtAfbTelefoneResid;
     // End of variables declaration//GEN-END:variables
 }

@@ -53,6 +53,7 @@ public class JFrmAfbPrincipal extends javax.swing.JFrame {
 
         jMenu2.setText("Cadastro");
 
+        jMnuAfbUsuario.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMnuAfbUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuario.png"))); // NOI18N
         jMnuAfbUsuario.setText("Usuario");
         jMnuAfbUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -62,6 +63,7 @@ public class JFrmAfbPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(jMnuAfbUsuario);
 
+        jMnuAfbClientes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMnuAfbClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cliente.png"))); // NOI18N
         jMnuAfbClientes.setText("Clientes");
         jMnuAfbClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -71,6 +73,8 @@ public class JFrmAfbPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(jMnuAfbClientes);
 
+        jMnuAfbFornecedores.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnuAfbFornecedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fornecedor1.png"))); // NOI18N
         jMnuAfbFornecedores.setText("Fornecedores");
         jMnuAfbFornecedores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +83,7 @@ public class JFrmAfbPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(jMnuAfbFornecedores);
 
+        jMnuAfbProdutos.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMnuAfbProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/produto.png"))); // NOI18N
         jMnuAfbProdutos.setText("Produtos");
         jMnuAfbProdutos.addActionListener(new java.awt.event.ActionListener() {
@@ -88,6 +93,8 @@ public class JFrmAfbPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(jMnuAfbProdutos);
 
+        jMnuAfbVendedores.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnuAfbVendedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/vendedor1.png"))); // NOI18N
         jMnuAfbVendedores.setText("Vendedores");
         jMnuAfbVendedores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +104,8 @@ public class JFrmAfbPrincipal extends javax.swing.JFrame {
         jMenu2.add(jMnuAfbVendedores);
         jMenu2.add(jSeparator1);
 
+        jMnuAfbSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMnuAfbSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit.png"))); // NOI18N
         jMnuAfbSair.setText("Sair");
         jMnuAfbSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author u07994189199
@@ -16,8 +18,29 @@ public class JDlgAfbUsuarios extends javax.swing.JDialog {
     public JDlgAfbUsuarios(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+          setTitle("Tela Usuario");
+        setLocationRelativeTo(null);
+          habilitar(false);
     }
-
+    
+    public void habilitar (boolean valor){
+        jTxtAfbNome.setEnabled(valor);
+        jTxtAfbApelido.setEnabled(valor);
+        jTxtAfbCodigo.setEnabled(valor);
+        jTxtAfbCpf.setEnabled(valor);
+        jPwfAfbSenha.setEnabled(valor);
+        jFmtAfbDataNasc.setEnabled(valor);
+        jChbAfbAtivo.setEnabled(valor);
+        jCboAfbNivel.setEnabled(valor);
+        jBtnAfbAlterar.setEnabled(!valor);
+        jBtnAfbCancelar.setEnabled(valor);
+        jBtnAfbConfirmar.setEnabled(valor);
+        jBtnAfbExcluir.setEnabled(!valor);
+        jBtnAfbIncluir.setEnabled(!valor);
+        jBtnAfbPesquisar.setEnabled(!valor);
+        
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,7 +62,7 @@ public class JDlgAfbUsuarios extends javax.swing.JDialog {
         jLabel5 = new javax.swing.JLabel();
         jPwfAfbSenha = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jCboAfbNivel = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
         jTxtAfbCodigo = new javax.swing.JTextField();
         jChbAfbAtivo = new javax.swing.JCheckBox();
@@ -64,7 +87,7 @@ public class JDlgAfbUsuarios extends javax.swing.JDialog {
 
         jLabel6.setText("Nivel");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCboAfbNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel8.setText("Codigo");
 
@@ -72,21 +95,51 @@ public class JDlgAfbUsuarios extends javax.swing.JDialog {
 
         jBtnAfbIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
         jBtnAfbIncluir.setText("Incluir");
+        jBtnAfbIncluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbIncluirActionPerformed(evt);
+            }
+        });
 
         jBtnAfbAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar_1.png"))); // NOI18N
         jBtnAfbAlterar.setText("Alterar");
+        jBtnAfbAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbAlterarActionPerformed(evt);
+            }
+        });
 
         jBtnAfbExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
         jBtnAfbExcluir.setText("Excluir");
+        jBtnAfbExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbExcluirActionPerformed(evt);
+            }
+        });
 
         jBtnAfbCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jBtnAfbCancelar.setText("Cancelar");
+        jBtnAfbCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbCancelarActionPerformed(evt);
+            }
+        });
 
         jBtnAfbConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
         jBtnAfbConfirmar.setText("Confirmar");
+        jBtnAfbConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbConfirmarActionPerformed(evt);
+            }
+        });
 
         jBtnAfbPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnAfbPesquisar.setText("Pesquisar");
+        jBtnAfbPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbPesquisarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -118,7 +171,7 @@ public class JDlgAfbUsuarios extends javax.swing.JDialog {
                             .addComponent(jTxtAfbCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCboAfbNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -145,7 +198,7 @@ public class JDlgAfbUsuarios extends javax.swing.JDialog {
                 .addGap(2, 2, 2)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTxtAfbCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCboAfbNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -181,6 +234,44 @@ public class JDlgAfbUsuarios extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtnAfbIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbIncluirActionPerformed
+
+        habilitar(true);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbIncluirActionPerformed
+
+    private void jBtnAfbAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbAlterarActionPerformed
+
+        habilitar(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbAlterarActionPerformed
+
+    private void jBtnAfbExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbExcluirActionPerformed
+            JOptionPane.showConfirmDialog(null, "após a escolha não terá vola....tem certeza que deseja exluir ?",
+            "Excluir registro", JOptionPane.YES_NO_OPTION);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbExcluirActionPerformed
+
+    private void jBtnAfbCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbCancelarActionPerformed
+            habilitar(false);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbCancelarActionPerformed
+
+    private void jBtnAfbConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbConfirmarActionPerformed
+            habilitar(false);
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbConfirmarActionPerformed
+
+    private void jBtnAfbPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbPesquisarActionPerformed
+         JOptionPane.showInputDialog(null, "digite o código do cliente:");
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbPesquisarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,8 +322,8 @@ public class JDlgAfbUsuarios extends javax.swing.JDialog {
     private javax.swing.JButton jBtnAfbExcluir;
     private javax.swing.JButton jBtnAfbIncluir;
     private javax.swing.JButton jBtnAfbPesquisar;
+    private javax.swing.JComboBox<String> jCboAfbNivel;
     private javax.swing.JCheckBox jChbAfbAtivo;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JFormattedTextField jFmtAfbDataNasc;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
