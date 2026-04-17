@@ -18,7 +18,7 @@ public class JDlgAfbClientes extends javax.swing.JDialog {
     public JDlgAfbClientes(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-          setTitle("Tela Cliente");
+          setTitle("Tela Clientes");
         setLocationRelativeTo(null);
          habilitar(false);
     }
