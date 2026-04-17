@@ -5,6 +5,8 @@
 package view;
 
 import View.JDlgAfbFornecedores;
+import View.JDlgAfbProdutos;
+import View.JDlgAfbVendedores;
 
 /**
  *
@@ -19,6 +21,8 @@ public class JFrmAfbPrincipal extends javax.swing.JFrame {
         initComponents();
         setTitle("Tela Principal");
         setLocationRelativeTo(null);
+        setExtendedState(MAXIMIZED_BOTH);
+        
     }
 
     /**
@@ -77,13 +81,28 @@ public class JFrmAfbPrincipal extends javax.swing.JFrame {
 
         jMnuAfbProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/produto.png"))); // NOI18N
         jMnuAfbProdutos.setText("Produtos");
+        jMnuAfbProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnuAfbProdutosActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMnuAfbProdutos);
 
         jMnuAfbVendedores.setText("Vendedores");
+        jMnuAfbVendedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnuAfbVendedoresActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMnuAfbVendedores);
         jMenu2.add(jSeparator1);
 
         jMnuAfbSair.setText("Sair");
+        jMnuAfbSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnuAfbSairActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMnuAfbSair);
 
         jMenuBar1.add(jMenu2);
@@ -139,6 +158,26 @@ public class JFrmAfbPrincipal extends javax.swing.JFrame {
        jDlgAfbFornecedores.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMnuAfbFornecedoresActionPerformed
+
+    private void jMnuAfbProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuAfbProdutosActionPerformed
+       JDlgAfbProdutos jDlgAfbProdutos = new JDlgAfbProdutos(null, true);
+       jDlgAfbProdutos.setVisible(true);
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMnuAfbProdutosActionPerformed
+
+    private void jMnuAfbVendedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuAfbVendedoresActionPerformed
+        JDlgAfbVendedores  jDlgAfbVendedores = new JDlgAfbVendedores(null, true);
+         jDlgAfbVendedores.setVisible(true);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMnuAfbVendedoresActionPerformed
+
+    private void jMnuAfbSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuAfbSairActionPerformed
+
+        System.exit(0);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMnuAfbSairActionPerformed
 
     /**
      * @param args the command line arguments
