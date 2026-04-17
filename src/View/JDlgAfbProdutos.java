@@ -4,6 +4,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author u07994189199
@@ -16,7 +18,29 @@ public class JDlgAfbProdutos extends javax.swing.JDialog {
     public JDlgAfbProdutos(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setTitle("Tela Produtos");
+        setLocationRelativeTo(null);
+        habilitar(false);
     }
+    
+    
+    public void habilitar (boolean valor){
+        jTxtAfbNome.setEnabled(valor);
+        jTxtAfbDescricao.setEnabled(valor);
+        jTxtAfbCodigo.setEnabled(valor);
+        jTxtAfbEstoque.setEnabled(valor);
+        jTxtAfbPreco.setEnabled(valor);
+        jFmtAfbDataNasc.setEnabled(valor);
+        jChbAfbAtivo.setEnabled(valor);
+        jBtnAfbAlterar.setEnabled(!valor);
+        jBtnAfbCancelar.setEnabled(valor);
+        jBtnAfbConfirmar.setEnabled(valor);
+        jBtnAfbExcluir.setEnabled(!valor);
+        jBtnAfbIncluir.setEnabled(!valor);
+        jBtnAfbPesquisar.setEnabled(!valor);
+        
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -71,21 +95,51 @@ public class JDlgAfbProdutos extends javax.swing.JDialog {
 
         jBtnAfbExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
         jBtnAfbExcluir.setText("Excluir");
+        jBtnAfbExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbExcluirActionPerformed(evt);
+            }
+        });
 
         jBtnAfbCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar_1.png"))); // NOI18N
         jBtnAfbCancelar.setText("Cancelar");
+        jBtnAfbCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbCancelarActionPerformed(evt);
+            }
+        });
 
         jBtnAfbConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
         jBtnAfbConfirmar.setText("Confirmar");
+        jBtnAfbConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbConfirmarActionPerformed(evt);
+            }
+        });
 
         jBtnAfbPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnAfbPesquisar.setText("Pesquisar");
+        jBtnAfbPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbPesquisarActionPerformed(evt);
+            }
+        });
 
         jBtnAfbIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
         jBtnAfbIncluir.setText("Incluir");
+        jBtnAfbIncluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbIncluirActionPerformed(evt);
+            }
+        });
 
         jBtnAfbAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/alterar.png"))); // NOI18N
         jBtnAfbAlterar.setText("Alterar");
+        jBtnAfbAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAfbAlterarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -176,8 +230,48 @@ public class JDlgAfbProdutos extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTxtAfbEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtAfbEstoqueActionPerformed
-        // TODO add your handling code here:
+        
+
+// TODO add your handling code here:
     }//GEN-LAST:event_jTxtAfbEstoqueActionPerformed
+
+    private void jBtnAfbIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbIncluirActionPerformed
+        habilitar(true);
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbIncluirActionPerformed
+
+    private void jBtnAfbAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbAlterarActionPerformed
+        habilitar(true);
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbAlterarActionPerformed
+
+    private void jBtnAfbExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbExcluirActionPerformed
+         JOptionPane.showConfirmDialog(null, "após a escolha não terá vola....tem certeza que deseja exluir ?",
+            "Excluir registro", JOptionPane.YES_NO_OPTION);
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbExcluirActionPerformed
+
+    private void jBtnAfbCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbCancelarActionPerformed
+          habilitar(false);
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbCancelarActionPerformed
+
+    private void jBtnAfbConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbConfirmarActionPerformed
+         habilitar(false);
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbConfirmarActionPerformed
+
+    private void jBtnAfbPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAfbPesquisarActionPerformed
+         JOptionPane.showInputDialog(null, "digite o código do cliente:");
+
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAfbPesquisarActionPerformed
 
     /**
      * @param args the command line arguments
