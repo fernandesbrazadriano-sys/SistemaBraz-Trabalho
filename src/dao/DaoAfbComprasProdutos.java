@@ -32,7 +32,7 @@ public class DaoAfbComprasProdutos extends DaoAfbAbstract {
             password = "adriano_braz";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            String sql = "insert into Afb_Compras_Produtos values (?,?,?,?,?,?,?,?)";
+            String sql = "insert into AFB_Compras_Produtos values (?,?,?,?,?,?,?,?)";
             PreparedStatement pst = cnt.prepareStatement( sql );
             pst.setInt(1, afbComprasProdutos.getAfbIdCompra());
             pst.setInt(2, afbComprasProdutos.getAfbIdCompraProd());
@@ -83,7 +83,7 @@ public class DaoAfbComprasProdutos extends DaoAfbAbstract {
             password = "adriano_braz";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            String sql = "delete from afb_Compras_Produtos values(?,?,?,?,?,?,?,?) ";
+            String sql = "delete from AFB_Compras_Produtos values(?,?,?,?,?,?,?,?) ";
             PreparedStatement pst = cnt.prepareStatement(sql);
             //
              pst.executeUpdate();

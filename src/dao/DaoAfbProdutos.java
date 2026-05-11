@@ -32,7 +32,7 @@ public class DaoAfbProdutos extends DaoAfbAbstract {
             password = "adriano_braz";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            String sql = "insert into Afb_produtos values (?,?,?,?,?,?,?,?)";
+            String sql = "insert into AFB_Produtos values (?,?,?,?,?,?,?,?)";
             PreparedStatement pst = cnt.prepareStatement( sql );
             pst.setInt(1, afbProdutos.getAfbCodigo());
             pst.setInt(2, afbProdutos.getAfbEstoque());
@@ -61,7 +61,7 @@ public class DaoAfbProdutos extends DaoAfbAbstract {
             password = "adriano_braz";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            PreparedStatement pst = cnt.prepareStatement("update set afb_produtos values(?,?,?,?,?,?,?,?) ");
+            PreparedStatement pst = cnt.prepareStatement("update set AFB_Produtos values(?,?,?,?,?,?,?,?) ");
           
             pst.executeUpdate();
             
@@ -83,7 +83,7 @@ public class DaoAfbProdutos extends DaoAfbAbstract {
             password = "adriano_braz";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            String sql = "delete from afb_produtos values(?,?,?,?,?,?,?,?) ";
+            String sql = "delete from AFB_Produtos values(?,?,?,?,?,?,?,?) ";
             PreparedStatement pst = cnt.prepareStatement(sql);
             //
              pst.executeUpdate();
